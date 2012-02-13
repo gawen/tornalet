@@ -8,6 +8,11 @@ What about a mix of the two ?
 
 ## Howto
 
+To install tornalet, you can clone this repository or use PyPI:
+
+    easy_install tornalet
+    pip install tornalet
+
 To enable tornale, prefix each of your handler's method the decorator ``@tornalet.tornalet``.
 
 Then decorate with ``tornalet.asyncify`` each of your *blocking* function. This will make your function asynchronous.
