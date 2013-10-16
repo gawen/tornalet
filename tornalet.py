@@ -57,6 +57,12 @@ def asyncify(func = None, callback_argname = None):
         Just use it normally, tornalet won't do anything.
 
     """
+    try:
+        basestring
+    except NameError:
+        # Python 3 removed basestring, all strings inherit unicode now
+        basestring = unicode
+
     if isinstance(func, basestring) or func is None:
         callback_argname = func
         func = None
