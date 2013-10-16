@@ -1,11 +1,15 @@
-__author__ = "Gawen Arab"
-__copyright__ = "Copyright 2012, Gawen Arab"
-__credits__ = ["Gawen Arab"]
-__license__ = "Apache License, Version 2.0"
-__version__ = "1.0"
-__maintainer__ = "Gawen Arab"
-__email__ = "g@wenarab.com"
-__status__ = "Production"
+from os.path import join, dirname
+
+package_info = open(join(dirname(__file__), 'tornalet_info.txt')).readlines()
+
+__author__ = package_info[0]
+__copyright__ = package_info[1]
+__credits__ = package_info[2].split(',')
+__license__ = package_info[3]
+__version__ = package_info[4]
+__maintainer__ = package_info[5]
+__email__ = package_info[6]
+__status__ = package_info[7]
 
 import greenlet
 import tornado.web
