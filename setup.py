@@ -5,25 +5,23 @@ try:
 except:
     from distutils.core import setup
 
-from os.path import join, dirname
-
-package_info = open(join(dirname(__file__), 'tornalet_info.txt')).readlines()
+import tornalet_info
 
 setup(
     name = "tornalet",
     description = "Tornado + Greenlet = Beautiful",
 
-    py_modules = ["tornalet"],
+    py_modules=['tornalet_info', 'tornalet'],
     install_requires = [
         "greenlet",
         "tornado",
     ],
 
-    version = package_info[4],
-    author = package_info[5],
-    author_email = package_info[6],
+    version = tornalet_info.__version__,
+    author = tornalet_info.__author__,
+    author_email = tornalet_info.__email__,
     url = "https://github.com/Gawen/tornalet",
-    license = package_info[3],
+    license = tornalet_info.__license__,
     classifiers = [
         "Development Status :: 5 - Production/Stable",
         "License :: OSI Approved :: Apache Software License",
@@ -31,6 +29,5 @@ setup(
         "Programming Language :: Python",
         "Topic :: Internet :: WWW/HTTP :: HTTP Servers",
         "Topic :: Software Development :: Libraries :: Python Modules",
-    ],
-    data_files=[('', ['tornalet_info.txt'])]
+    ]
 )

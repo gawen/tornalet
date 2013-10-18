@@ -1,15 +1,4 @@
-from os.path import join, dirname
-
-package_info = open(join(dirname(__file__), 'tornalet_info.txt')).readlines()
-
-__author__ = package_info[0]
-__copyright__ = package_info[1]
-__credits__ = package_info[2].split(',')
-__license__ = package_info[3]
-__version__ = package_info[4]
-__maintainer__ = package_info[5]
-__email__ = package_info[6]
-__status__ = package_info[7]
+from tornalet_info import *
 
 import greenlet
 import tornado.web
