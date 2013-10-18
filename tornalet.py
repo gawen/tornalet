@@ -53,8 +53,8 @@ def asyncify(func = None, callback_argname = None):
     try:
         basestring
     except NameError:
-        # Python 3 removed basestring, all strings inherit unicode now
-        basestring = unicode
+        # Python 3 removed basestring, all strings inherit str now
+        basestring = str
 
     if isinstance(func, basestring) or func is None:
         callback_argname = func
