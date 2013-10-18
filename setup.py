@@ -12,7 +12,7 @@ package_info = open(join(dirname(__file__), 'tornalet_info.txt')).readlines()
 setup(
     name = "tornalet",
     description = "Tornado + Greenlet = Beautiful",
-    
+
     py_modules = ["tornalet"],
     install_requires = [
         "greenlet",
@@ -32,6 +32,5 @@ setup(
         "Topic :: Internet :: WWW/HTTP :: HTTP Servers",
         "Topic :: Software Development :: Libraries :: Python Modules",
     ],
-    package_data={'': ['tornalet_info.txt']},
-    include_package_data=True
+    data_files=[('', ['tornalet_info.txt'])]
 )
