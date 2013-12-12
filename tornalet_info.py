@@ -1,6 +1,6 @@
-__author__ = "Gawen Arab"
+__author__ = "Gawen Arab, Wes Mason"
 __copyright__ = "Copyright 2012, Gawen Arab"
-__credits__ = ["Gawen Arab"]
+__credits__ = ["Gawen Arab", "Wes Mason"]
 __license__ = "Apache License, Version 2.0"
 __version__ = "1.0.1"
 __maintainer__ = "Gawen Arab"
